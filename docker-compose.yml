@@ -1,0 +1,34 @@
+version: "2.1"
+
+services:
+    example:
+        container_name: example
+        image: example
+        restart: always
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        environment:
+            NODE_ENV: production
+            REDISURL: redis
+            MONGODB_IP: mongo
+        ports:
+            - 5600:5600
+        logging:
+            options:
+                max-size: 50m
+        links:
+            - redis
+            - mongo
+    redis:
+        container_name: redis
+        image: "redis:alpine"
+        restart: always
+        ports:
+            - "6379:6379"
+    mongo:
+        container_name: mongo
+        image: mongo
+        restart: always
+        ports:
+            - "27017:27017"

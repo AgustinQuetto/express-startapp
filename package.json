@@ -1,0 +1,34 @@
+{
+    "name": "example",
+    "version": "1.0.0",
+    "description": "Example-Server | Agustín Quetto",
+    "main": "index.js",
+    "scripts": {
+        "local-win": "set NODE_ENV=local && supervisor index.js",
+        "local": "NODE_ENV=local supervisor index.js",
+        "dev": "NODE_ENV=develop node index.js",
+        "start": "NODE_ENV=production node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@bitbucket.org/digiventures2017/example.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "homepage": "https://bitbucket.org/digiventures2017/example#readme",
+    "dependencies": {
+        "axios": "^0.19.2",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "lodash": "^4.17.15",
+        "moment": "^2.24.0",
+        "moment-timezone": "^0.5.26",
+        "mongoose": "^5.6.7",
+        "query-string": "^6.8.2",
+        "redis": "^2.8.0",
+        "supervisor": "^0.12.0",
+        "winston": "^3.2.1",
+        "winston-loggly-bulk": "^3.0.1"
+    }
+}

@@ -1,0 +1,25 @@
+version: 2
+jobs:
+    build:
+        machine: true
+        working_directory: ~/example
+        steps:
+            - add_ssh_keys:
+                  fingerprints:
+                      - ""
+            - checkout
+            - run:
+                  name: Add IP to known_hosts
+                  command: ssh-keyscan $DEPLOY_HOST >> ~/.ssh/known_hosts
+            - deploy:
+                  command: |
+                      chmod +x deploy.sh
+                      ./deploy.sh
+workflows:
+    version: 2
+    deploy:
+        jobs:
+            - build:
+                  filters:
+                      branches:
+                          only: master
