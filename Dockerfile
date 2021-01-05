@@ -1,4 +1,4 @@
-FROM node:10.15-alpine
+FROM node:14.15.0-alpine
 ENV NODE_ENV production
 ENV PORT 5600
 ENV REDISURL redis
