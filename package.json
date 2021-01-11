@@ -9,10 +9,6 @@
         "dev": "NODE_ENV=develop node index.js",
         "start": "NODE_ENV=production node index.js"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+ssh://git@bitbucket.org/digiventures2017/example.git"
-    },
     "author": "",
     "license": "ISC",
     "homepage": "https://bitbucket.org/digiventures2017/example#readme",
