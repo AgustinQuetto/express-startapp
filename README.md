@@ -8,6 +8,17 @@ Depending on the command is how the configuration parameters will be taken in co
 
 Postman: https://www.getpostman.com/collections/1f3446cb2a28ca628061
 
+Features:
+
+-   Docker+Docker-compose
+-   CircleCI
+-   MongoDB+Mongoose
+-   Redis
+-   S3
+-   Loggly
+-   utilities + dynamic configuration
+-   Fully working example of API Rest
+
 Query params:
 
 -   ?firstname=example&lastname=example&etc...
